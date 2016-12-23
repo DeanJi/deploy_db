@@ -1,0 +1,12 @@
+#!/bin/ksh
+
+if [ -z $JAVA_HOME ]; then
+   echo "set JAVA_HOME to execute"
+   echo "error $JAVA_HOME is not set" > $2
+   exit 1
+fi;
+
+echo "DDB_DEPLOY_DBHOME is [$DDB_DEPLOY_DBHOME]"
+
+$JAVA_HOME/bin/java -cp $DDB_DEPLOY_DBHOME/lib/james_commons_1_2_1.jar:$DDB_DEPLOY_DBHOME/lib/log4j-1.2.8.jar com.ubs.james.commons.crypto.impl.tools.CryptoText D $1 $DDB_DEPLOY_DBHOME/lib/ifopdb.key >$2 2>&1
+ 
