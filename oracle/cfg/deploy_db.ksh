@@ -1,6 +1,6 @@
 #!/bin/ksh
 
-DDB_CONFIG_DIR=${$$APP_HOME$$}/config/deploy_db/oracle
+DDB_CONFIG_DIR=${$$APP_HOME$$}/deploy_db/oracle
 JAVA_HOME=/usr
 
 CONFIG_FILE=$DDB_CONFIG_DIR/cfg/deploy_db.cfg
