@@ -1,0 +1,2 @@
+EXEC DBMS_UTILITY.compile_schema('DB_USRE_NAME',FALSE)
+/
